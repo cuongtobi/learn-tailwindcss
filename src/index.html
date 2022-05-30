@@ -6,8 +6,63 @@
         <link href="../dist/output.css" rel="stylesheet">
     </head>
     <body>
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="#" class="flex items-center">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button" class="navbar__search-btn">
+                        <i class="icon__search w-5 h-5"></i>
+                    </button>
+                    <div class="hidden relative md:block">
+                        <div class="navbar__search-icon">
+                            <i class="icon__search w-5 h-5"></i>
+                        </div>
+                        <input type="text" id="search-navbar" class="navbar__search-input" placeholder="Search...">
+                    </div>
+                    <button type="button" class="navbar__menu-btn">
+                        <i class="icon__menu-open w-6 h-6"></i>
+                        <i class="icon__menu-close w-6 h-6 d-none"></i>
+                    </button>
+                </div>
+                <div class="navbar__menu">
+                    <div class="navbar__mobile-search">
+                        <div class="navbar__search-icon">
+                            <i class="icon__search w-5 h-5"></i>
+                        </div>
+                        <input type="text" id="search-navbar" class="navbar__mobile-search-input" placeholder="Search...">
+                    </div>
+                    <ul class="navbar__menu-items">
+                        <li>
+                            <a href="#" class="navbar__menu-item">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar__menu-item">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar__menu-item">Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto my-5">
+            <div class="row">
+                <div class="coll bg-gray-300">
+                    <div class="row">
+                        <div class="col bg-red-300">01</div>
+                        <div class="col bg-red-300">02</div>
+                        <div class="col bg-red-300">03</div>
+                        <div class="col bg-red-300">04</div>
+                        <div class="col bg-red-300">05</div>
+                        <div class="col bg-red-300">06</div>
+                        <div class="col bg-red-300">07</div>
+                    </div>
+                </div>
+                <div class="colr bg-blue-300">02</div>
+            </div>
+        </div>
     </body>
 </html>
