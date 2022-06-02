@@ -6,63 +6,622 @@
         <link href="../dist/output.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <a href="#" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-                </a>
-                <div class="flex md:order-2">
-                    <button type="button" class="navbar__search-btn">
-                        <i class="icon__search w-5 h-5"></i>
-                    </button>
-                    <div class="hidden relative md:block">
-                        <div class="navbar__search-icon">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                    </a>
+                    <div class="flex md:order-2">
+                        <button type="button" id="js__search-btn" class="navbar__search-btn">
                             <i class="icon__search w-5 h-5"></i>
+                        </button>
+                        <div class="hidden relative md:block">
+                            <div class="navbar__search-icon">
+                                <i class="icon__search w-5 h-5"></i>
+                            </div>
+                            <input type="text" id="search-navbar" class="navbar__search-input" placeholder="Search...">
                         </div>
-                        <input type="text" id="search-navbar" class="navbar__search-input" placeholder="Search...">
+                        <button type="button" id="js__menu-btn" class="navbar__menu-btn">
+                            <i class="icon__menu-open w-6 h-6"></i>
+                        </button>
                     </div>
-                    <button type="button" class="navbar__menu-btn">
-                        <i class="icon__menu-open w-6 h-6"></i>
-                        <i class="icon__menu-close w-6 h-6 d-none"></i>
-                    </button>
-                </div>
-                <div class="navbar__menu">
-                    <div class="navbar__mobile-search">
-                        <div class="navbar__search-icon">
-                            <i class="icon__search w-5 h-5"></i>
+                    <div id="js__menu" class="navbar__menu">
+                        <div class="navbar__mobile-search">
+                            <div class="navbar__search-icon">
+                                <i class="icon__search w-5 h-5"></i>
+                            </div>
+                            <input type="text" id="search-navbar" class="navbar__mobile-search-input" placeholder="Search...">
                         </div>
-                        <input type="text" id="search-navbar" class="navbar__mobile-search-input" placeholder="Search...">
+                        <ul class="navbar__menu-items">
+                            <li>
+                                <a href="#" title="Home" class="navbar__menu-item">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" title="New Ringtones" class="navbar__menu-item">New Ringtones</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Best Ringtones" class="navbar__menu-item">Best Ringtones</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Iphone" class="navbar__menu-item">Iphone</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="navbar__menu-items">
-                        <li>
-                            <a href="#" class="navbar__menu-item">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="navbar__menu-item">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="navbar__menu-item">Services</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
-        <div class="container mx-auto my-5">
+        <div class="container mx-auto my-5 pt-12">
+            <div class="box px-4 my-2 text-center">
+                <h1>Lorem ipsum dolor sit amet</h1>
+            </div>
+
             <div class="row">
-                <div class="coll bg-gray-300">
-                    <div class="row">
-                        <div class="col bg-red-300">01</div>
-                        <div class="col bg-red-300">02</div>
-                        <div class="col bg-red-300">03</div>
-                        <div class="col bg-red-300">04</div>
-                        <div class="col bg-red-300">05</div>
-                        <div class="col bg-red-300">06</div>
-                        <div class="col bg-red-300">07</div>
+                <div class="coll p-2">
+                    <div class="box px-2 my-5">
+                        <nav class="breadcrumb" aria-label="Breadcrumb">
+                            <ol>
+                                <li class="inline-flex items-center">
+                                    <a href="#" class="breadcrumb__home">
+                                        <i class="icon__home mr-2 w-4 h-4"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="flex items-center">
+                                        <i class="icon__right-arrow w-6 h-6"></i>
+                                        <a href="#" class="breadcrumb__item">Pop</a>
+                                    </div>
+                                </li>
+                                <li aria-current="page">
+                                    <div class="flex items-center">
+                                        <i class="icon__right-arrow w-6 h-6"></i>
+                                        <span class="breadcrumb__current">Lorem ipsum dolor sit amet</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
+
+                    <article id="ringtone-123" class="p-2">
+                        <div class="box box--white">
+                            <h1>Lorem ipsum dolor sit amet</h1>
+
+                            <div class="ringtone-detail__audio">
+                                <audio class="w-full" controls>
+                                    <source src="https://klingeltonekostenlos.de/wp-content/uploads/2022/06/Bayern-München.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+
+                            <div class="ringtone-detail__description">
+                                Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.
+                            </div>
+
+                            <div class="ringtone-detail__info">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                Kategorien
+                                            </th>
+                                            <td>
+                                                <a href="#" class="text-blue-700" title="Pop">Pop</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Herunterladen
+                                            </th>
+                                            <td>
+                                                1234
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Hör mal zu
+                                            </th>
+                                            <td>
+                                                1234
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Dateigröße
+                                            </th>
+                                            <td>
+                                                157 KB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Dateityp
+                                            </th>
+                                            <td>
+                                                MP3
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Teilen
+                                            </th>
+                                            <td>
+                                                <a href="#" class="social-link" title="Facebook" target="_blank" rel="nofollow">Facebook</a>
+                                                <a href="#" class="social-link" title="Twitter" target="_blank" rel="nofollow">Twitter</a>
+                                                <a href="#" class="social-link" title="Whatsapp" target="_blank" rel="nofollow">Whatsapp</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="my-5 text-center">
+                                <a href="#" class="download-btn" title="Herunterladen">Herunterladen</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="page-123" class="p-2">
+                        <div class="box box--white">
+                            <h1 class="page__title">Lorem ipsum dolor sit amet</h1>
+                            <div class="page__content">
+                                <p>Are you searching for an editing tool to create videos and share our best experiences with friends? Let KineMaster Pro Mod APK assist you in getting the most out of your work. Keep on reading to find out the excellent features that this Mod application brings!</p>
+                                <p><img loading="lazy" class="size-full wp-image-953 aligncenter" src="https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021.jpg" alt="KineMaster Pro Mod APK 2021" width="1980" height="1114" srcset="https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021.jpg 1980w, https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021-300x169.jpg 300w, https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021-1024x576.jpg 1024w, https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021-768x432.jpg 768w, https://apksunny.com/wp-content/uploads/2021/11/KineMaster-Pro-Mod-APK-2021-1536x864.jpg 1536w" sizes="(max-width: 1980px) 100vw, 1980px"></p>
+                                <h3><span id="Why_Do_You_Need_Kinemaster_Pro_APK">Why Do You Need Kinemaster Pro APK?</span></h3>
+                                <p>KineMaster Pro for Android is an open, watermark-free video editing app. With Android devices, this software offers the flexibility to create videos.</p>
+                                <p>KineMaster Premium APK allows users to edit movies professionally. You may use typefaces, overlays, green screen layers (chroma key), and multimedia elements, among many other features, to edit videos with this application.</p>
+                                <p>KineMaster Pro Mod APK is a replacement for the Premium’s latest version. It is a cracked application of the Pro version, meaning they are identical. The only difference is that the hacked app will not charge you any fee to unlock advanced tools.</p>
+                                <h3><span id="Incredible_Features_Of_KineMaster_Pro">Incredible Features Of KineMaster Pro</span></h3>
+                                <h4><span id="Seamless_Editing">Seamless Editing</span></h4>
+                                <p>Trimming videos is a very time-consuming process, especially when you are inexperienced with editing tools. This will no longer be your problem when using this app.</p>
+                                <p>It is extremely simple to use with an easy-on-the-eye interface. The clips can be divided in any way you like. It’s also feasible to use frames to time sound clips.</p>
+                                <h4><span id="No_Watermark">No Watermark</span></h4>
+                                <p>A watermark is a way that this app identifies its work. However, many people find it bothersome to look at, as it distracts them from the content they are watching. Unless you purchase the advanced service, you cannot remove the watermarks from your videos.</p>
+                                <p>Still, we have found a solution, which is the APK version. With it, you can download and use the KineMaster without watermark for free.</p>
+                                <h4><span id="Multi-Track_Sound">Multi-Track Sound</span></h4>
+                            </div>
+                        </div>
+                    </article>
+
+                    <section id="new-ringtones">
+                        <h3 class="pl-2">New Ringtones</h3>
+                        <div class="row my-3">
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box text-center">
+                            <a href="#" class="view-more" title="View More...">View More...</a>
+                        </div>
+                    </section>
+
+                    <section id="best-ringtones">
+                        <h3 class="pl-2 mt-5">Best Ringtones</h3>
+                        <div class="row my-3">
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ringtone">
+                                    <div class="ringtone__play">
+                                        <i class="icon__play"></i>
+                                    </div>
+                                    <div class="ringtone__info">
+                                        <a href="#" title="Lorem ipsum dolor sit amet">
+                                            <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                            <div class="ringtone__meta">
+                                                <span class="ringtone__meta-item"><i class="icon__music"></i><span>Music</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                                <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <nav aria-label="Page navigation">
+                                <div class="nav-links">
+                                    <a href="#" class="prev page-numbers">Previous</a>
+                                    <a href="#" class="page-numbers">1</a>
+                                    <a href="#" class="page-numbers">2</a>
+                                    <span href="#" aria-current="page" class="current page-numbers">3</span>
+                                    <a href="#" class="page-numbers">4</a>
+                                    <a href="#" class="page-numbers">5</a>
+                                    <a href="#" class="next page-numbers">Next</a>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
                 </div>
-                <div class="colr bg-blue-300">02</div>
+                <div class="colr p-2">
+                    <aside id="top-ringtones">
+                        <h3 class="mb-3">Top Ringtones</h3>
+
+                        <div class="ringtone">
+                            <div class="ringtone__play">
+                                <i class="icon__play"></i>
+                            </div>
+                            <div class="ringtone__info">
+                                <a href="#" title="Lorem ipsum dolor sit amet">
+                                    <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                    <div class="ringtone__meta">
+                                        <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                        <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ringtone">
+                            <div class="ringtone__play">
+                                <i class="icon__play"></i>
+                            </div>
+                            <div class="ringtone__info">
+                                <a href="#" title="Lorem ipsum dolor sit amet">
+                                    <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                    <div class="ringtone__meta">
+                                        <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                        <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ringtone">
+                            <div class="ringtone__play">
+                                <i class="icon__play"></i>
+                            </div>
+                            <div class="ringtone__info">
+                                <a href="#" title="Lorem ipsum dolor sit amet">
+                                    <div class="ringtone__title">Lorem ipsum dolor sit amet</div>
+                                    <div class="ringtone__meta">
+                                        <span class="ringtone__meta-item"><i class="icon__eye"></i><span>14345</span></span>
+                                        <span class="ringtone__meta-item"><i class="icon__download"></i><span>13255</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <aside id="categories">
+                        <h3 class="mb-3">Categories</h3>
+
+                        <div class="category">
+                            <a href="#" title="Music">Music</a> <span class="text-sm">(256)</span>
+                        </div>
+                        <div class="category">
+                            <a href="#" title="Pop">Pop</a> <span class="text-sm">(367)</span>
+                        </div>
+                        <div class="category">
+                            <a href="#" title="Pop">Lorem ipsum dolor sit amet ipsum dolor sit amet</a> <span class="text-sm">(367)</span>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
+
+        <footer class="my-5 bg-white border-t-2 border-blue-700 p-5">
+            <div class="container mx-auto text-center">
+                <div class="copyright">Copyright © 2022. Ringtones 2022.</div>
+
+                <div class="social">
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">Facebook</a></span> | 
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">Youtube</a></span> | 
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">Twitter</a></span>
+                </div>
+
+                <div class="pages">
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">DMCA</a></span> | 
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">About Us</a></span> | 
+                    <span><a href="#" title="Facebook" target="_blank" rel="noopener nofollow noreferrer">Cookie</a></span>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                let menuBtn = document.getElementById('js__menu-btn');
+                let searchBtn = document.getElementById('js__search-btn');
+                let menu = document.getElementById('js__menu');
+
+                menuBtn.addEventListener('click', function () {
+                    if (menu.style.display === 'none' || menu.style.display.length == 0) {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+
+                searchBtn.addEventListener('click', function () {
+                    if (menu.style.display === 'none' || menu.style.display.length == 0) {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
