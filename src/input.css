@@ -200,6 +200,10 @@ aside#categories .category {
     @apply bg-white px-4 py-2 mb-2 border-l-4 border-blue-700 truncate w-full;
 }
 
+aside#categories .category .category__count {
+    @apply text-sm text-gray-500;
+}
+
 .page__content img {
     @apply mb-4 mx-auto;
 }
@@ -273,7 +277,7 @@ aside#categories .category {
 }
 
 .ringtone-detail__info {
-    @apply mt-5;
+    @apply mt-5 overflow-x-auto;
 }
 
 .ringtone-detail__info table {

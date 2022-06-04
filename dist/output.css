@@ -638,11 +638,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -1273,6 +1268,13 @@ aside#categories .category {
   padding-bottom: 0.5rem;
 }
 
+aside#categories .category .category__count {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .page__content img {
   margin-left: auto;
   margin-right: auto;
@@ -1533,6 +1535,7 @@ aside#categories .category {
 
 .ringtone-detail__info {
   margin-top: 1.25rem;
+  overflow-x: auto;
 }
 
 .ringtone-detail__info table {
