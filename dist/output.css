@@ -574,6 +574,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1rem;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -636,6 +640,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-blue-700 {
@@ -853,7 +867,7 @@ p {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__search-btn {
     display: none;
   }
@@ -901,7 +915,7 @@ p {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__menu-btn {
     display: none;
   }
@@ -976,7 +990,7 @@ p {
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__menu {
     order: 1;
     display: flex;
@@ -989,7 +1003,7 @@ p {
   margin-top: 0.75rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__mobile-search {
     display: none;
   }
@@ -1666,6 +1680,12 @@ aside#categories .category .category__count {
   }
 
   .md\:block {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
     display: block;
   }
 }

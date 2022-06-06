@@ -89,12 +89,12 @@ p {
 
 .navbar__search-btn {
     line-height: 0.25rem;
-    @apply md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg p-2.5 mr-1;
+    @apply lg:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg p-2.5 mr-1;
 }
 
 .navbar__menu-btn {
     line-height: 0.25rem;
-    @apply inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600;
+    @apply inline-flex items-center p-2 text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600;
 }
 
 .navbar__search-input {
@@ -102,11 +102,11 @@ p {
 }
 
 .navbar__menu {
-    @apply hidden justify-between items-center w-full md:flex md:w-auto md:order-1;
+    @apply hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1;
 }
 
 .navbar__mobile-search {
-    @apply relative mt-3 md:hidden;
+    @apply relative mt-3 lg:hidden;
 }
 
 .navbar__mobile-search-input {

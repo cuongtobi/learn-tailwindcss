@@ -10,13 +10,13 @@
             <nav class="navbar">
                 <div class="navbar__container">
                     <a href="#" class="flex items-center">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                        <img src="https://klingeltonekostenlos.de/wp-content/uploads/2020/08/klingeltonekostenlos.de_.png" class="mr-3 h-9" alt="Flowbite Logo" />
                     </a>
                     <div class="flex md:order-2">
                         <button type="button" id="js__search-btn" class="navbar__search-btn">
                             <i class="icon__search w-5 h-5"></i>
                         </button>
-                        <div class="hidden relative md:block">
+                        <div class="hidden relative lg:block">
                             <div class="navbar__search-icon">
                                 <i class="icon__search w-5 h-5"></i>
                             </div>
@@ -156,7 +156,9 @@
                             </div>
 
                             <div class="my-5 text-center">
-                                <a href="#" class="download-btn" title="Herunterladen">Herunterladen</a>
+                                <div id="js__wait-for" class="text-4xl hidden">5</div>
+                                <a href="javascript:void(0)" id="js__download-btn" class="download-btn" title="Herunterladen">Herunterladen</a>
+                                <a href="javascript:void(0)" id="js__download-mp3" class="download-btn hidden" title="MP3">MP3</a>
                             </div>
                         </div>
                     </article>
@@ -605,6 +607,8 @@
                 let menuBtn = document.getElementById('js__menu-btn');
                 let searchBtn = document.getElementById('js__search-btn');
                 let menu = document.getElementById('js__menu');
+                let downloadBtn = document.getElementById('js__download-btn');
+                let download = document.getElementById('js__download-mp3');
 
                 menuBtn.addEventListener('click', function () {
                     if (menu.style.display === 'none' || menu.style.display.length == 0) {
@@ -621,6 +625,47 @@
                         menu.style.display = 'none';
                     }
                 });
+
+                downloadBtn.addEventListener('click', function () {
+                    let waitFor = document.getElementById('js__wait-for');
+                    waitFor.classList.remove('hidden');
+                    this.classList.add('hidden');
+
+                    var timeleft = 5;
+                    var downloadTimer = setInterval(function() {
+                        if (timeleft <= 0) {
+                            clearInterval(downloadTimer);
+                            waitFor.innerHTML = '';
+                            download.classList.remove('hidden');
+                            waitFor.classList.add('hidden');
+                        } else {
+                            waitFor.innerHTML = timeleft;
+                        }
+                        timeleft -= 1;
+                    }, 1000);
+                });
+
+                let iconClick = function () {
+                    if (this.classList.contains('icon__play')) {
+                        let pauseIcons = document.getElementsByClassName('icon__pause');
+                        
+                        for (let i = 0; i < pauseIcons.length; i++) {
+                            pauseIcons[i].className = 'icon__play';
+                        }
+
+                        this.classList.remove('icon__play');
+                        this.classList.add('icon__pause');
+                    } else {
+                        this.classList.remove('icon__pause');
+                        this.classList.add('icon__play');
+                    }
+                };
+
+                let icons = document.getElementsByClassName('icon__play');
+
+                for (let i = 0; i < icons.length; i++) {
+                    icons[i].addEventListener('click', iconClick);
+                }
             });
         </script>
     </body>
