@@ -562,20 +562,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-9 {
+  height: 2.25rem;
 }
 
 .h-5 {
   height: 1.25rem;
 }
 
-.h-4 {
-  height: 1rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-9 {
-  height: 2.25rem;
+.h-4 {
+  height: 1rem;
 }
 
 .w-5 {
@@ -640,11 +640,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -1077,7 +1072,7 @@ p {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__menu-items {
     margin-top: 0px;
     flex-direction: row;
@@ -1130,7 +1125,7 @@ p {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__menu-item {
     border-width: 0px;
     padding: 0px;
@@ -1668,23 +1663,17 @@ aside#categories .category .category__count {
   margin-bottom: 1.25rem;
 }
 
-@media (min-width: 640px) {
-  .sm\:h-9 {
-    height: 2.25rem;
-  }
-}
-
 @media (min-width: 768px) {
   .md\:order-2 {
     order: 2;
   }
-
-  .md\:block {
-    display: block;
-  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-2 {
+    order: 2;
+  }
+
   .lg\:block {
     display: block;
   }
