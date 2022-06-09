@@ -184,7 +184,7 @@ p {
     @apply font-medium;
 }
 
-#top-ringtones .ringtone {
+.sidebar__ringtones .ringtone {
     @apply mb-4;
 }
 

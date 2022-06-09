@@ -1248,7 +1248,7 @@ p {
   font-weight: 500;
 }
 
-#top-ringtones .ringtone {
+.sidebar__ringtones .ringtone {
   margin-bottom: 1rem;
 }
 
@@ -1661,12 +1661,6 @@ aside#categories .category .category__count {
 
 .page__title {
   margin-bottom: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .md\:order-2 {
-    order: 2;
-  }
 }
 
 @media (min-width: 1024px) {
